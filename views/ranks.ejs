@@ -1,0 +1,43 @@
+<%- include('header') -%>
+<div
+class="rounded bg-light  "
+style="
+  height: 3rem;
+  text-align: center;
+  font-size: 3rem;
+"
+>
+<h2 style="box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.159); color: rgb(110, 110, 110); font-weight: lighter"class= "my-3 pb-3">
+  Laptop Table </h2>
+
+</div>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <table
+        class="table table-bordered bg-light"
+        style="color: rgb(8, 95, 95);">
+        <thead>
+          <tr>
+            <th scope="col"><b>Sl.No</b></th>
+            <th scope="col"><b>Name</b></th>
+            <th scope="col"><b>Processor</b></th>
+            <th scope="col"><b>Price</b></th>
+          </tr>
+        </thead>
+
+        <% for(x of laps) {%>
+        <tbody>
+          <tr>
+            <th scope="row"><%= x.selector%></th>
+            <td><%= x.name %></td>
+            <td><%= x.processor %></td>
+            <td><%= x.price %></td>
+          </tr>
+        </tbody>
+        <% } %>
+      </table>
+    </div>
+  </div>
+</div>
+<%- include('footer') -%>
